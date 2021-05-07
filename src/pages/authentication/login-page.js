@@ -12,6 +12,7 @@ import {
     TextField,
     Typography
 } from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 
 const LoginPage = () => {
@@ -41,6 +42,13 @@ const LoginPage = () => {
             },
             title: {
                 textTransform: "uppercase"
+            },
+            link: {
+                textDecoration: "none"
+            },
+            textButton: {
+                paddingTop: 16,
+                paddingBottom: 16,
             }
         }
     });
@@ -148,6 +156,11 @@ const LoginPage = () => {
                                     Sign In
                                 </Button>
 
+                                <Link className={classes.link} to="/auth/register">
+                                    <Button fullWidth={true} className={classes.textButton} variant="text" size="large">
+                                        Don't have an account? Register
+                                    </Button>
+                                </Link>
                             </CardContent>
                         </Card>
                     </Grid>

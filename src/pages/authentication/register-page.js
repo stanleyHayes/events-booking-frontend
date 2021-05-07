@@ -12,6 +12,7 @@ import {
     TextField,
     Typography
 } from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 
 const RegisterPage = () => {
@@ -41,6 +42,13 @@ const RegisterPage = () => {
             },
             title: {
                 textTransform: "uppercase"
+            },
+            link: {
+                textDecoration: "none"
+            },
+            textButton: {
+                paddingTop: 16,
+                paddingBottom: 16,
             }
         }
     });
@@ -108,6 +116,7 @@ const RegisterPage = () => {
                                     helperText={error.name}
                                 />
 
+                                <Typography gutterBottom={true} variant="caption">Gender</Typography>
                                 <Select
                                     className={classes.textField}
                                     margin="none"
@@ -115,6 +124,7 @@ const RegisterPage = () => {
                                     displayEmpty={true}
                                     fullWidth={true}
                                     name="gender"
+                                    variant="outlined"
                                     value={gender}
                                     defaultValue={"MALE"}
                                     onChange={handleUserChange}>
@@ -122,6 +132,7 @@ const RegisterPage = () => {
                                     <MenuItem value="FEMALE">Female</MenuItem>
                                 </Select>
 
+                                <Typography gutterBottom={true} variant="caption">Role</Typography>
                                 <Select
                                     className={classes.textField}
                                     margin="none"
@@ -129,6 +140,7 @@ const RegisterPage = () => {
                                     displayEmpty={true}
                                     fullWidth={true}
                                     name="role"
+                                    variant="outlined"
                                     value={role}
                                     defaultValue={"USER"}
                                     onChange={handleUserChange}>
@@ -193,6 +205,11 @@ const RegisterPage = () => {
                                     Sign Up
                                 </Button>
 
+                                <Link className={classes.link} to="/auth/login">
+                                    <Button fullWidth={true} className={classes.textButton} variant="text" size="large">
+                                        Already have an account? Login
+                                    </Button>
+                                </Link>
                             </CardContent>
                         </Card>
                     </Grid>
