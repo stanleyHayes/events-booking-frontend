@@ -69,7 +69,7 @@ const DrawerContent = ({handleDrawerClose}) => {
                         className={classes.name}
                         variant="h4"
                         align="center">
-                        Streamline Resources GH
+                        Events
                     </Typography>
                     <Divider variant="middle" className={classes.subDivider} light={true}/>
                     <Typography
@@ -77,7 +77,7 @@ const DrawerContent = ({handleDrawerClose}) => {
                         className={classes.nickname}
                         variant="h6"
                         align="center">
-                        GRA Affixing Facility
+                        Get the latest, hottest events right here
                     </Typography>
                 </Grid>
             </Grid>
@@ -94,15 +94,15 @@ const DrawerContent = ({handleDrawerClose}) => {
 
                     <Divider variant="fullWidth" className={classes.subDivider} light={true}/>
 
-                    <Link to="/bookings" className={classes.link}>
+                    <Link to="/events" className={classes.link}>
                         <Button fullWidth={true} variant="text" size="large">
-                            Bookings
+                            Events
                         </Button>
                     </Link>
 
                     <Divider variant="fullWidth" className={classes.subDivider} light={true}/>
 
-                    <Link to="/new/booking" className={classes.link}>
+                    <Link to="/new/event" className={classes.link}>
                         <Button fullWidth={true} variant="text" size="large">
                             Create
                         </Button>
@@ -110,9 +110,9 @@ const DrawerContent = ({handleDrawerClose}) => {
 
                     <Divider variant="fullWidth" className={classes.subDivider} light={true}/>
 
-                    <Link to="/account" className={classes.link}>
+                    <Link to="/users/johndoe/reservations" className={classes.link}>
                         <Button fullWidth={true} variant="text" size="large">
-                            Account
+                            My Reservations
                         </Button>
                     </Link>
 
